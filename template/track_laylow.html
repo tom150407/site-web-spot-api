@@ -1,0 +1,28 @@
+{{define "track_laylow.html"}}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/asset/css/style.css">
+    <title>Maladresse – Laylow</title>
+</head>
+<body>
+
+<h1>{{.Name}}</h1>
+
+<img src="{{(index .Album.Images 0).URL}}" width="300">
+
+<p><strong>Album :</strong> {{.Album.Name}}</p>
+<p><strong>Date :</strong> {{.Album.ReleaseDate}}</p>
+
+<p><strong>Artistes :</strong>
+    {{range .Artists}}{{.Name}} {{end}}
+</p>
+
+<a href="{{index .ExternalURLs "spotify"}}" target="_blank">
+    Écouter sur Spotify
+</a>
+
+</body>
+</html>
+{{end}}
