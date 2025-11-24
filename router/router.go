@@ -3,7 +3,7 @@ package router
 import (
 	"net/http"
 
-	"github.com/tom150407/site-web-spot-api/controller"
+	controller "github.com/tom150407/site-web-spot-api/controlleur"
 )
 
 func NewRouter() *http.ServeMux {

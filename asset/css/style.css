@@ -1,0 +1,204 @@
+/* -------------- FONT -------------- */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  background: #0c0f12;
+  text-align: center;
+}
+
+/* -------------- BACKGROUND ANIMÉ -------------- */
+
+.menu-bg,
+.album-bg,
+.track-bg {
+  min-height: 100vh;
+  background: radial-gradient(circle at 25% 25%, #1db954, #0b0f15, #000);
+  background-size: 200% 200%;
+  animation: bgMove 10s infinite alternate;
+}
+
+@keyframes bgMove {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+/* -------------- HEADER -------------- */
+
+.menu-header,
+.page-header {
+  padding: 40px 20px;
+  margin-bottom: 20px; /* IMPORTANT → séparation header / contenu */
+}
+
+.spotify-logo,
+.spotify-logo-small {
+  width: 40px; /* plus petit */
+  margin-bottom: 10px;
+}
+
+.menu-header h1,
+.page-header h1 {
+  font-size: 2.4rem;
+  margin: 0;
+  font-weight: 700;
+}
+
+.menu-header p {
+  font-size: 1.2rem;
+  color: #d1d1d1;
+  margin-top: 8px;
+}
+
+/* -------------- MENU PAGE -------------- */
+
+.menu-content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.menu-card {
+  width: 260px;
+  padding: 35px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.menu-icon {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+/* -------------- ALBUM PAGE -------------- */
+
+.album-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  padding: 40px;
+  gap: 28px;
+}
+
+.album-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 18px;
+  backdrop-filter: blur(12px);
+  transition: 0.2s ease;
+}
+
+.album-card:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.album-cover {
+  width: 100%;
+  max-width: 160px;
+  border-radius: 14px;
+  display: block;
+  margin: 0 auto;
+}
+
+.album-card h3 {
+  margin-top: 12px;
+  font-size: 1.05rem;
+}
+
+.album-info {
+  font-size: 0.9rem;
+  margin-top: 8px;
+  color: #cfcfcf;
+}
+
+/* -------------- TRACK PAGE -------------- */
+
+.track-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px;
+  gap: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.track-left img {
+  width: 300px;
+  max-width: 100%;
+  border-radius: 18px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.5);
+}
+
+.track-right {
+  max-width: 350px;
+  text-align: left;
+}
+
+.track-right h2 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.track-right p {
+  margin: 6px 0;
+  font-size: 1rem;
+}
+
+/* -------------- BUTTONS -------------- */
+
+.spotify-btn {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 12px 20px;
+  background: #1db954;
+  color: #000;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: 0.2s ease;
+}
+
+.spotify-btn:hover {
+  filter: brightness(1.15);
+  transform: scale(1.04);
+}
+
+.back-btn {
+  display: block;
+  width: max-content;
+  margin: 30px auto 10px;
+  color: #d6d6d6;
+  text-decoration: none;
+}
+
+.back-btn:hover {
+  color: #ffffff;
+}
+
+/* -------------- FOOTER -------------- */
+
+.menu-footer {
+  margin-top: 30px;
+  padding: 20px 0;
+  color: #aaaaaa;
+}

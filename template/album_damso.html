@@ -1,23 +1,34 @@
-{{define "album_damso.html"}}
 <!DOCTYPE html>
-<html>
+<html lang="fr">
   <head>
-    <link rel="stylesheet" href="/asset/css/style.css" />
     <meta charset="UTF-8" />
     <title>Albums de Damso</title>
+    <link rel="stylesheet" href="/asset/css/style.css" />
   </head>
-  <body>
-    <h1>Albums de Damso</h1>
-    <div class="grid">
+  <body class="album-bg">
+    <header class="page-header">
+      <img
+        src="/asset/img/Spotify_logo.png"
+        class="spotify-logo-small"
+        alt="Logo Spotify"
+      />
+      <h1>Albums de Damso</h1>
+    </header>
+
+    <main class="album-grid">
       {{range .}}
-      <div class="card">
-        <img src="{{(index .Images 0).URL}}" width="200" />
+      <div class="album-card">
+        <img src="{{(index .Images 0).URL}}" class="album-cover" />
         <h3>{{.Name}}</h3>
-        <p>{{.ReleaseDate}}</p>
-        <p>Musiques : {{.TotalTracks}}</p>
+
+        <div class="album-info">
+          <p>📅 {{.ReleaseDate}}</p>
+          <p>🎧 {{.TotalTracks}} titres</p>
+        </div>
       </div>
       {{end}}
-    </div>
+    </main>
+
+    <a href="/" class="back-btn">⬅ Retour</a>
   </body>
 </html>
-{{end}}

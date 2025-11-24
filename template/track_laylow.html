@@ -1,28 +1,44 @@
-{{define "track_laylow.html"}}
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <title>Laylow – Maladresse</title>
     <link rel="stylesheet" href="/asset/css/style.css">
-    <title>Maladresse – Laylow</title>
 </head>
-<body>
 
-<h1>{{.Name}}</h1>
+<body class="track-bg">
 
-<img src="{{(index .Album.Images 0).URL}}" width="300">
+<header class="page-header">
+    <img src="/asset/img/Spotify_logo.png" class="spotify-logo-small" alt="Logo Spotify">
+    <h1>Laylow – Maladresse</h1>
+</header>
 
-<p><strong>Album :</strong> {{.Album.Name}}</p>
-<p><strong>Date :</strong> {{.Album.ReleaseDate}}</p>
+<main class="track-container">
 
-<p><strong>Artistes :</strong>
-    {{range .Artists}}{{.Name}} {{end}}
-</p>
+    <div class="track-left">
+        <img src="{{(index .Album.Images 0).URL}}" alt="Cover" />
+    </div>
 
-<a href="{{index .ExternalURLs "spotify"}}" target="_blank">
-    Écouter sur Spotify
-</a>
+    <div class="track-right">
+        <h2>{{.Name}}</h2>
+
+        <p><strong>Album :</strong> {{.Album.Name}}</p>
+        <p><strong>Date de sortie :</strong> {{.Album.ReleaseDate}}</p>
+
+        <p><strong>Artistes :</strong><br>
+            {{range .Artists}}
+                {{.Name}} <br>
+            {{end}}
+        </p>
+
+        <a href="{{index .ExternalURLs "spotify"}}" target="_blank" class="spotify-btn">
+            ▶ Écouter sur Spotify
+        </a>
+
+        <a href="/" class="back-btn">⬅ Retour</a>
+    </div>
+
+</main>
 
 </body>
 </html>
-{{end}}

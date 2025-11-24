@@ -17,12 +17,17 @@ var (
 
 func spotifyToken() (string, error) {
 
+	// Token valide ? On le réutilise
 	if tokenCache != "" && time.Now().Before(tokenExpiry) {
 		return tokenCache, nil
 	}
 
 	clientID := os.Getenv("SPOTIFY_CLIENT_ID")
 	secret := os.Getenv("SPOTIFY_CLIENT_SECRET")
+
+	if clientID == "" || secret == "" {
+		return "", nil // ERREUR : token vide
+	}
 
 	data := url.Values{}
 	data.Set("grant_type", "client_credentials")
@@ -33,7 +38,8 @@ func spotifyToken() (string, error) {
 	)
 
 	req.Header.Set("Content-Type", "application/x-www-form-urlencoded")
-	req.Header.Set("Authorization", "Basic "+base64.StdEncoding.EncodeToString([]byte(clientID+":"+secret)))
+	req.Header.Set("Authorization",
+		"Basic "+base64.StdEncoding.EncodeToString([]byte(clientID+":"+secret)))
 
 	resp, err := http.DefaultClient.Do(req)
 	if err != nil {
@@ -53,9 +59,8 @@ func spotifyToken() (string, error) {
 	return tokenCache, nil
 }
 
-// ---------------- API DAMSO -----------------
-
 func GetDamsoAlbums() ([]Album, error) {
+
 	token, _ := spotifyToken()
 
 	req, _ := http.NewRequest("GET",
@@ -79,7 +84,9 @@ func GetDamsoAlbums() ([]Album, error) {
 	return result.Items, nil
 }
 
-// ---------------- API LAYLOW -----------------
+
+//         API : Track Laylow - Maladresse     //
+
 
 func GetLaylowTrack() (Track, error) {
 
