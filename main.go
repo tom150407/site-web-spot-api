@@ -1,22 +1,26 @@
 package main
 
 import (
-	"log"
-	"net/http"
+    "log"
+    "net/http"
 
-	"github.com/tom150407/site-web-spot-api/router"
+    "github.com/joho/godotenv"
+    "site_web_spot/router"
 )
 
 func main() {
 
-	r := router.NewRouter()
+    if err := godotenv.Load(); err != nil {
+        log.Println("⚠️ Impossible de charger .env, vérifie sa position")
+    }
 
-	// fichiers statiques
-	fs := http.FileServer(http.Dir("asset"))
-	http.Handle("/asset/", http.StripPrefix("/asset/", fs))
+    r := router.NewRouter()
 
-	http.Handle("/", r)
+    fs := http.FileServer(http.Dir("asset"))
+    http.Handle("/asset/", http.StripPrefix("/asset/", fs))
 
-	log.Println("🔥 Serveur prêt : http://localhost:8080")
-	log.Fatal(http.ListenAndServe(":8080", nil))
+    http.Handle("/", r)
+
+    log.Println("🔥 Serveur prêt : http://localhost:8080")
+    log.Fatal(http.ListenAndServe(":8080", nil))
 }

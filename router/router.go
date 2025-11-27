@@ -3,15 +3,15 @@ package router
 import (
 	"net/http"
 
-	controller "github.com/tom150407/site-web-spot-api/controlleur"
+	controller "github.com/tom150407/site-web-spot/controlleur"
 )
 
 func NewRouter() *http.ServeMux {
-	mux := http.NewServeMux()
+    mux := http.NewServeMux()
 
-	mux.HandleFunc("/", controller.Menu)
-	mux.HandleFunc("/album/damso", controller.Damso)
-	mux.HandleFunc("/track/laylow", controller.Laylow)
+    mux.HandleFunc("/", controller.Menu)
+    mux.HandleFunc("/album/damso", controller.Damso)
+    mux.HandleFunc("/track/laylow", controller.Laylow)
 
-	return mux
+    return mux
 }
