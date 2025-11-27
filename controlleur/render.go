@@ -1,4 +1,4 @@
-package controller
+package controlleur
 
 import (
 	"html/template"

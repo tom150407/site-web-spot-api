@@ -2,16 +2,15 @@ package router
 
 import (
 	"net/http"
-
-	controller "github.com/tom150407/site-web-spot/controlleur"
+	"site-web-spot/controlleur"
 )
 
 func NewRouter() *http.ServeMux {
     mux := http.NewServeMux()
 
-    mux.HandleFunc("/", controller.Menu)
-    mux.HandleFunc("/album/damso", controller.Damso)
-    mux.HandleFunc("/track/laylow", controller.Laylow)
+    mux.HandleFunc("/", controlleur.Menu)
+    mux.HandleFunc("/album/damso", controlleur.Damso)
+    mux.HandleFunc("/track/laylow", controlleur.Laylow)
 
     return mux
 }

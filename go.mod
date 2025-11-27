@@ -1,4 +1,4 @@
-module github.com/tom150407/site_web_spot
+module site-web-spot
 
 go 1.21
 

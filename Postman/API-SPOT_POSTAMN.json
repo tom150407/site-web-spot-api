@@ -1,0 +1,368 @@
+{
+	"info": {
+		"_postman_id": "28304cbf-1363-44f0-bd4f-ca892acf70b5",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "50122683",
+		"_collection_link": "https://www.postman.com/tomlaloeve-5653402/workspace/api-spotify/collection/50122683-28304cbf-1363-44f0-bd4f-ca892acf70b5?action=share&source=collection_link&creator=50122683"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://accounts.spotify.com/api/token?grant_type=client_credentials&client_id=bdbdbad3f32d4c2e8e3f8618b11d69cf&client_secret=89d94a8b0b384b1583027a9c1582c778",
+					"protocol": "https",
+					"host": [
+						"accounts",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"api",
+						"token"
+					],
+					"query": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials"
+						},
+						{
+							"key": "client_id",
+							"value": "bdbdbad3f32d4c2e8e3f8618b11d69cf"
+						},
+						{
+							"key": "client_secret",
+							"value": "89d94a8b0b384b1583027a9c1582c778"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Q1",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer BQC3ZDVGwrEiyCaQ-TmkJBO5mZegHrr13wTjM-jv5W2l7CAeL12qJ0llxaATlP0e28nKUI-A43SRKSGEHbi5xRwuhzL3tkG7zj5QZmB9lIzJZPwnnvW6ELXt6nsfVyMa0uWYpqtvxis",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.spotify.com/v1/artists/2UwqpfQtNuhBwviIC0f2ie?si=9c623a4449a444d4",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"artists",
+						"2UwqpfQtNuhBwviIC0f2ie"
+					],
+					"query": [
+						{
+							"key": "si",
+							"value": "9c623a4449a444d4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Q2",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer BQC3ZDVGwrEiyCaQ-TmkJBO5mZegHrr13wTjM-jv5W2l7CAeL12qJ0llxaATlP0e28nKUI-A43SRKSGEHbi5xRwuhzL3tkG7zj5QZmB9lIzJZPwnnvW6ELXt6nsfVyMa0uWYpqtvxis",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.spotify.com/v1/artists/2UwqpfQtNuhBwviIC0f2ie?si=9c623a4449a444d4/album",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"artists",
+						"2UwqpfQtNuhBwviIC0f2ie"
+					],
+					"query": [
+						{
+							"key": "si",
+							"value": "9c623a4449a444d4/album"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Q3",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer BQC3ZDVGwrEiyCaQ-TmkJBO5mZegHrr13wTjM-jv5W2l7CAeL12qJ0llxaATlP0e28nKUI-A43SRKSGEHbi5xRwuhzL3tkG7zj5QZmB9lIzJZPwnnvW6ELXt6nsfVyMa0uWYpqtvxis",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.spotify.com/v1/albums/4beTtJKeg3ITJsiVuxkiV0?si=UcoC9EfYRSa3E8Ln4Lyfpw/tracks?limit=5&offset=0",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"albums",
+						"4beTtJKeg3ITJsiVuxkiV0"
+					],
+					"query": [
+						{
+							"key": "si",
+							"value": "UcoC9EfYRSa3E8Ln4Lyfpw/tracks?limit=5"
+						},
+						{
+							"key": "offset",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Q4",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer BQC3ZDVGwrEiyCaQ-TmkJBO5mZegHrr13wTjM-jv5W2l7CAeL12qJ0llxaATlP0e28nKUI-A43SRKSGEHbi5xRwuhzL3tkG7zj5QZmB9lIzJZPwnnvW6ELXt6nsfVyMa0uWYpqtvxis",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.spotify.com/v1/tracks/6nkFbmDY84a9rejFSbIMdj?si=0e594a9521354dc3",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"tracks",
+						"6nkFbmDY84a9rejFSbIMdj"
+					],
+					"query": [
+						{
+							"key": "si",
+							"value": "0e594a9521354dc3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Q5",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer BQC3ZDVGwrEiyCaQ-TmkJBO5mZegHrr13wTjM-jv5W2l7CAeL12qJ0llxaATlP0e28nKUI-A43SRKSGEHbi5xRwuhzL3tkG7zj5QZmB9lIzJZPwnnvW6ELXt6nsfVyMa0uWYpqtvxis",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.spotify.com/v1/artists/0LnhY2fzptb0QEs5Q5gM7S?si=KTQ8h63hQHiyqJatmCDiqw/top-tracks",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"artists",
+						"0LnhY2fzptb0QEs5Q5gM7S"
+					],
+					"query": [
+						{
+							"key": "si",
+							"value": "KTQ8h63hQHiyqJatmCDiqw/top-tracks"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Q6",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{vault:bearer-token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.spotify.com/v1/tracks/67Pf31pl0PfjBfUmvYNDCL?si=336eaa2148194c1f",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"tracks",
+						"67Pf31pl0PfjBfUmvYNDCL"
+					],
+					"query": [
+						{
+							"key": "si",
+							"value": "336eaa2148194c1f"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Q7",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{vault:bearer-token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.spotify.com/v1/shows/6y1PloEyNsCNJH9vHias4T?si=8a9ca6d91d7e42fd",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"shows",
+						"6y1PloEyNsCNJH9vHias4T"
+					],
+					"query": [
+						{
+							"key": "si",
+							"value": "8a9ca6d91d7e42fd"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Q8",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer BQC3ZDVGwrEiyCaQ-TmkJBO5mZegHrr13wTjM-jv5W2l7CAeL12qJ0llxaATlP0e28nKUI-A43SRKSGEHbi5xRwuhzL3tkG7zj5QZmB9lIzJZPwnnvW6ELXt6nsfVyMa0uWYpqtvxis",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.spotify.com/v1/shows/6y1PloEyNsCNJH9vHias4T/episodes?limit=3",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"shows",
+						"6y1PloEyNsCNJH9vHias4T",
+						"episodes"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Q9",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer BQC3ZDVGwrEiyCaQ-TmkJBO5mZegHrr13wTjM-jv5W2l7CAeL12qJ0llxaATlP0e28nKUI-A43SRKSGEHbi5xRwuhzL3tkG7zj5QZmB9lIzJZPwnnvW6ELXt6nsfVyMa0uWYpqtvxis",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.spotify.com/v1/shows/6y1PloEyNsCNJH9vHias4T/episodes?limit=1&offset=1",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"shows",
+						"6y1PloEyNsCNJH9vHias4T",
+						"episodes"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "offset",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

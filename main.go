@@ -1,11 +1,12 @@
 package main
 
 import (
-    "log"
-    "net/http"
+	"log"
+	"net/http"
 
-    "github.com/joho/godotenv"
-    "site_web_spot/router"
+	"site-web-spot/router"
+
+	"github.com/joho/godotenv"
 )
 
 func main() {
